@@ -1,6 +1,7 @@
 package Entities;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "students")
@@ -21,6 +22,40 @@ public class StudentEnt {
 
   @Column(name = "age")
   private int age;
+
+  public studentAddress getAddr() {
+    return addr;
+  }
+
+  public void setAddr(studentAddress addr) {
+    this.addr = addr;
+  }
+
+  @Embedded
+  private studentAddress addr;
+
+
+  @OneToMany(fetch = FetchType.EAGER, mappedBy = "stud")
+  private Set<Exam> exams_set;
+
+  public Set<Exam> getExams_set() {
+    return exams_set;
+  }
+
+  public void setExams_set(Set<Exam> exams_set) {
+    this.exams_set = exams_set;
+  }
+
+  @Override
+  public String toString() {
+    return "StudentEnt{" +
+        "id=" + id +
+        ", firstName='" + firstName + '\'' +
+        ", lastName='" + lastName + '\'' +
+        ", patronymic='" + patronymic + '\'' +
+        ", age=" + age +
+        '}';
+  }
 
   public int getId() {
     return id;

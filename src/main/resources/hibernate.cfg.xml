@@ -20,8 +20,8 @@
     <property name="use_sql_comments">false</property>
 
     <mapping class="Entities.StudentEnt"></mapping>
-<!--    <mapping class="com.hillel.hibernate.entity.Subject"></mapping>-->
-<!--    <mapping class="com.hillel.hibernate.entity.Exam"></mapping>-->
+    <mapping class="Entities.Subject"></mapping>
+    <mapping class="Entities.Exam"></mapping>
 
 
     <!--

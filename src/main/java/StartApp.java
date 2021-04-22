@@ -1,6 +1,6 @@
-import Entities.Exam;
-import Entities.StudentEnt;
-import Entities.studentAddress;
+import Entity.Exam;
+import Entity.Student;
+import Entity.StudentAddress;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 

@@ -1,4 +1,4 @@
-package Entities;
+package Entity;
 
 import javax.persistence.*;
 
@@ -13,7 +13,7 @@ public class Exam {
 
   @ManyToOne(fetch = FetchType.EAGER)
   @JoinColumn(name = "stud")
-  private StudentEnt stud;
+  private Student stud;
 
 
   @ManyToOne(fetch = FetchType.EAGER)
@@ -46,11 +46,11 @@ public class Exam {
     this.grade = grade;
   }
 
-  public StudentEnt getStud() {
+  public Student getStud() {
     return stud;
   }
 
-  public void setStud(StudentEnt stud) {
+  public void setStud(Student stud) {
     this.stud = stud;
   }
 

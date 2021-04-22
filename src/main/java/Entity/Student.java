@@ -1,11 +1,11 @@
-package Entities;
+package Entity;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 @Table(name = "students")
-public class StudentEnt {
+public class Student {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,16 +23,16 @@ public class StudentEnt {
   @Column(name = "age")
   private int age;
 
-  public studentAddress getAddr() {
+  public StudentAddress getAddr() {
     return addr;
   }
 
-  public void setAddr(studentAddress addr) {
+  public void setAddr(StudentAddress addr) {
     this.addr = addr;
   }
 
   @Embedded
-  private studentAddress addr;
+  private StudentAddress addr;
 
 
   @OneToMany(fetch = FetchType.EAGER, mappedBy = "stud")

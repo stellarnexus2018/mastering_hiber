@@ -1,10 +1,10 @@
-package Entities;
+package Entity;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class studentAddress {
+public class StudentAddress {
 
 
   @Column(name = "city")

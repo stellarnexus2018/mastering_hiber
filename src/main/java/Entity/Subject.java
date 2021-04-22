@@ -1,4 +1,4 @@
-package Entities;
+package Entity;
 
 import javax.persistence.*;
 import java.util.Set;
